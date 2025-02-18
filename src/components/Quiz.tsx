@@ -34,7 +34,7 @@ const Quiz: React.FC = () => {
         const res = await fetch("/api/quiz");
         if (!res.ok) throw new Error(`Failed to fetch questions: ${res.status}`);
 
-        let data = await res.json();
+        let data   = await res.json();
 
         // Shuffle questions before setting them
         data = shuffleArray(data);

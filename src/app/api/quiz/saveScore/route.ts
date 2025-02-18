@@ -27,12 +27,19 @@ export async function POST(req: Request) {
       await user.save();
       return NextResponse.json({ message: 'Score saved successfully', user }, { status: 200 });
   
-    } catch (error: any) {  // Type error as any
-      if (error.name === 'ValidationError') {
-        console.error('Validation error:', error);
-        return NextResponse.json({ error: 'Validation error: ' + error.message }, { status: 400 });
+    }catch (error: unknown) {  
+        if (error instanceof Error) {
+          if (error.name === 'ValidationError') {
+            console.error('Validation error:', error);
+            return NextResponse.json({ error: 'Validation error: ' + error.message }, { status: 400 });
+          }
+          console.error('Error saving user:', error);
+          return NextResponse.json({ error: 'Failed to save score' }, { status: 500 });
+        }
+      
+        // If error is not an instance of Error
+        console.error('Unknown error:', error);
+        return NextResponse.json({ error: 'An unexpected error occurred' }, { status: 500 });
       }
-      console.error('Error saving user:', error);
-      return NextResponse.json({ error: 'Failed to save score' }, { status: 500 });
-    }
+      
   }

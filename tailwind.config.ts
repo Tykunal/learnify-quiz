@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "#A6A6A6", // Grey for icons
+        dark: "#333333", // Dark text
+        light: "#F2F2F2",
       },
     },
   },

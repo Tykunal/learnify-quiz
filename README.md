@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+The nextjs app is deployed over vercel and can be accessed through the following link : learnify-quiz.vercel.app
 
 ## Getting Started
 

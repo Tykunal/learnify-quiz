@@ -1,0 +1,579 @@
+[{
+  "question": "The range of unsigned 8-bit number is:",
+  "options": [
+    "0 to 255",
+    "-128 to 127",
+    "0 to 256",
+    "-256 to 255"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  "question": "What is the result of binary subtraction: 1000 - 0011?",
+  "options": [
+    "0101",
+    "0111",
+    "1011",
+    "0100"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+
+  "question": "Which logic gate output is 1 only when all inputs are 1?",
+  "options": [
+    "OR",
+    "AND",
+    "NAND",
+    "NOR"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+
+  "question": "The boolean expression A + A'B simplifies to:",
+  "options": [
+    "A + B",
+    "AB",
+    "B",
+    "A"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+  "question": "How many bytes are in 1 kilobyte?",
+  "options": [
+    "1000",
+    "1024",
+    "512",
+    "2048"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+
+  "question": "Which of these is not a valid data type in C?",
+  "options": [
+    "long long int",
+    "unsigned char",
+    "string",
+    "float"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+ 
+  "question": "What is the output of: printf('%d', 3/2);",
+  "options": [
+    "1.5",
+    "1",
+    "2",
+    "1.0"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+
+  "question": "In C, what is the maximum value that can be stored in an unsigned int (32-bit)?",
+  "options": [
+    "2147483647",
+    "4294967295",
+    "65535",
+    "2147483648"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+ 
+  "question": "Which operator has higher precedence?",
+  "options": [
+    "++",
+    "+",
+    "*",
+    "="
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+  "question": "What is the value of x after: x = 3 + 2 * 4;",
+  "options": [
+    "20",
+    "11",
+    "14",
+    "10"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  "question": "Which header file is needed for malloc()?",
+  "options": [
+    "<string.h>",
+    "<stdlib.h>",
+    "<stdio.h>",
+    "<math.h>"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+
+  "question": "What happens if we don't include a return statement in a non-void function?",
+  "options": [
+    "Compiler error",
+    "Returns 0",
+    "Returns garbage value",
+    "Program crashes"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+
+  "question": "The expression 5 != 3 evaluates to:",
+  "options": [
+    "0",
+    "1",
+    "true",
+    "false"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+
+  "question": "What is the output of: printf('%d', sizeof('A'));",
+  "options": [
+    "1",
+    "2",
+    "4",
+    "8"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+ 
+  "question": "Which is not a valid variable name?",
+  "options": [
+    "_123",
+    "variable_1",
+    "1_variable",
+    "_variable1"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+
+  "question": "What does this code print? int x=5; printf('%d %d', x--, --x);",
+  "options": [
+    "5 3",
+    "5 4",
+    "4 3",
+    "4 4"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+
+  "question": "The correct way to declare a pointer to an integer is:",
+  "options": [
+    "int ptr*",
+    "int *ptr",
+    "*int ptr",
+    "pointer int ptr"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "What is the value of arr[1]? int arr[] = {10, 20, 30}; int *p = arr; p++;",
+  "options": [
+    "10",
+    "20",
+    "30",
+    "Garbage value"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "Which statement is used to exit from a loop?",
+  "options": [
+    "exit",
+    "break",
+    "continue",
+    "return"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+ 
+  "question": "What is the output of: printf('%d', 'A' + 1);",
+  "options": [
+    "B",
+    "66",
+    "65",
+    "AB"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "In C, arrays are:",
+  "options": [
+    "Pass by value",
+    "Pass by reference",
+    "Both depending on declaration",
+    "Neither"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "What is the size of float data type?",
+  "options": [
+    "2 bytes",
+    "4 bytes",
+    "8 bytes",
+    "Depends on compiler"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "Which function is used to compare strings in C?",
+  "options": [
+    "strcmp()",
+    "strcpy()",
+    "strcat()",
+    "strlen()"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+
+  "question": "The modulus operator (%) in C can be used with:",
+  "options": [
+    "Integers only",
+    "Floating point numbers",
+    "Both integers and floating points",
+    "Characters"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+  
+  "question": "What is the output of: int i=1; while(i--) printf('%d', i);",
+  "options": [
+    "1",
+    "0",
+    "Nothing",
+    "Infinite loop"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  
+  "question": "Which of these is not a storage class specifier in C?",
+  "options": [
+    "auto",
+    "static",
+    "volatile",
+    "register"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  
+  
+  "question": "What happens when we try to access an array out of bounds?",
+  "options": [
+    "Compiler error",
+    "Runtime error",
+    "Undefined behavior",
+    "Returns 0"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  
+  
+  "question": "The correct way to read a character array in C is:",
+  "options": [
+    "scanf('%s', str);",
+    "scanf('%s', &str);",
+    "gets(str);",
+    "All of above"
+  ],
+  "correctAnswerIndex": 3
+},
+{
+  
+ 
+  "question": "What is the value of EOF in C?",
+  "options": [
+    "0",
+    "-1",
+    "1",
+    "NULL"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  
+  "question": "Which operator is used for pointer declaration and multiplication?",
+  "options": [
+    "&",
+    "*",
+    "**",
+    "->"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  
+  "question": "What is the output of: printf('%d', NULL);",
+  "options": [
+    "0",
+    "-1",
+    "Garbage value",
+    "Compiler error"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+  
+  "question": "The sizeof operator returns the size in:",
+  "options": [
+    "Bits",
+    "Bytes",
+    "Words",
+    "Depends on data type"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+ 
+  "question": "Convert binary 1101 1011 to decimal:",
+  "options": [
+    "219",
+    "221",
+    "217",
+    "223"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+  
+  "question": "Which binary number represents -6 in 8-bit 2's complement?",
+  "options": [
+    "11111001",
+    "11111010",
+    "11111110",
+    "11111000"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "The hexadecimal equivalent of binary 1111 0000 is:",
+  "options": [
+    "F0",
+    "0F",
+    "FF",
+    "E1"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+
+  "question": "How many different values can be represented using 6 bits?",
+  "options": [
+    "32",
+    "64",
+    "128",
+    "256"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+
+  "question": "What is the octal equivalent of decimal 78?",
+  "options": [
+    "116",
+    "115",
+    "117",
+    "114"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  
+
+  "question": "In binary addition, 1101 + 1001 equals:",
+  "options": [
+    "10110",
+    "11000",
+    "10111",
+    "10100"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+
+  "question": "The 1's complement of 10110 is:",
+  "options": [
+    "01001",
+    "01010",
+    "01100",
+    "01110"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+
+  "question": "How many bits are needed to represent numbers from -128 to +127?",
+  "options": [
+    "7 bits",
+    "8 bits",
+    "9 bits",
+    "6 bits"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  
+  "question": "What is the binary equivalent of (AF)₁₆?",
+  "options": [
+    "1010 1111",
+    "1010 1110",
+    "1011 1111",
+    "1010 0111"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+
+  "question": "In BCD, decimal 95 is represented as:",
+  "options": [
+    "1001 0101",
+    "0101 1001",
+    "1001 1001",
+    "0101 0101"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+ 
+  "question": "What is the initial value of static variables?",
+  "options": [
+    "0",
+    "Garbage value",
+    "NULL",
+    "Undefined"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+  
+ 
+  "question": "The expression 5 & 3 evaluates to:",
+  "options": [
+    "1",
+    "2",
+    "3",
+    "0"
+  ],
+  "correctAnswerIndex": 1
+},
+{
+  
+  
+  "question": "What is the output of: printf(\"%x\", 15);",
+  "options": [
+    "15",
+    "F",
+    "f",
+    "0xF"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  
+
+  "question": "Which of these cannot be a variable name?",
+  "options": [
+    "_",
+    "__",
+    "___",
+    "None of above"
+  ],
+  "correctAnswerIndex": 3
+},
+{
+  
+
+  "question": "What happens when we divide by zero in C?",
+  "options": [
+    "Runtime error",
+    "Compiler error",
+    "Undefined behavior",
+    "Returns infinity"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  "question": "The correct way to declare a constant in C is:",
+  "options": [
+    "const int X = 10;",
+    "#define X 10",
+    "Both a and b",
+    "None of above"
+  ],
+  "correctAnswerIndex": 2
+},
+{
+ 
+ 
+  "question": "What is the value of x? int x = 5.0;",
+  "options": [
+    "5",
+    "5.0",
+    "4",
+    "Compiler error"
+  ],
+  "correctAnswerIndex": 0
+},
+{
+ 
+  
+  "question": "Which function is used to deallocate memory?",
+  "options": [
+    "dealloc()",
+    "free()",
+    "delete()",
+    "remove()"
+  ],
+  "correctAnswerIndex": 1
+}]

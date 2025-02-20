@@ -184,7 +184,7 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import { motion } from "framer-motion";
 
 interface FormData {
   name: string;
@@ -225,49 +225,75 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-xl font-semibold mb-4 text-black">Contact Form</h2>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-md mx-auto mt-10 p-6 bg-white shadow-lg rounded-2xl border border-gray-200"
+    >
+      <h2 className="text-2xl font-semibold mb-6 text-gray-900 text-center">
+        Contact Form
+      </h2>
       {submitted ? (
-        <p className="text-green-500">Form submitted successfully! You will now be redirected to the quiz.</p>
+        <p className="text-green-600 text-center font-medium">
+          ✅ Form submitted successfully! Redirecting to quiz...
+        </p>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-700">Name</label>
             <input
-              {...register('name', { required: 'Name is required' })}
+              {...register("name", { required: "Name is required" })}
               type="text"
-              className="mt-1 p-2 w-full border rounded-md text-black"
+              className="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 text-gray-900"
             />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
-              {...register('email', { required: 'Email is required' })}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Enter a valid email address",
+                },
+              })}
               type="email"
-              className="mt-1 p-2 w-full border rounded-md text-black"
+              className="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 text-gray-900"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">Phone Number</label>
             <input
-              {...register('phone', { required: 'Phone number is required' })}
+              {...register("phone", {
+                required: "Phone number is required",
+                pattern: {
+                  value: /^[0-9]{10}$/,
+                  message: "Phone number must be exactly 10 digits",
+                },
+              })}
               type="tel"
-              className="mt-1 p-2 w-full border rounded-md text-black"
+              className="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-400 text-gray-900"
             />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>}
           </div>
 
-          <button type="submit" className="mt-6 w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            type="submit"
+            className="mt-6 w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition shadow-md"
+          >
             Submit
-          </button>
+          </motion.button>
 
-          {errorMessage && <p className="text-red-500 text-sm mt-4">{errorMessage}</p>}
+          {errorMessage && <p className="text-red-500 text-sm mt-4 text-center">{errorMessage}</p>}
         </form>
       )}
-    </div>
+    </motion.div>
   );
 }

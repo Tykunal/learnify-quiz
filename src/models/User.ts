@@ -7,7 +7,7 @@ import mongoose, { Document, Schema } from "mongoose";
 interface IUser extends Document {
   name: string;
   email: string;
-  phone: string;
+  phone: number;
   score: number;  // Add score to the IUser interface
   createdAt: Date;
   updatedAt: Date;
@@ -28,7 +28,7 @@ const UserSchema = new Schema<IUser>({
     // match: [/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Please provide a valid email address"],  // Email regex validation
   },
   phone: { 
-    type: String, 
+    type: Number, 
     required: [true, "Phone number is required"],
     // match: [/^\+?[1-9]\d{1,14}$/, "Please provide a valid phone number"], // Phone number regex validation (E.164 format)
   },

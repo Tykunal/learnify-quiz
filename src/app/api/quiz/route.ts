@@ -1,21 +1,23 @@
-
-
-
 import { NextResponse } from "next/server";
-import { MongoClient } from "mongodb";
+// import { MongoClient } from "mongodb";
+import connectDB from "@/lib/mongodb";
+import Quiz from "@/models/QuizModel";
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017";
-const DB_NAME = "mango"; 
+// const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017";
+// const DB_NAME = "mango"; 
 
-export const GET = async () => {
+export async function GET() {
   try {
-    const client = await MongoClient.connect(MONGO_URI, {});
+    // const client = await MongoClient.connect(MONGO_URI, {});
 
-    const db = client.db(DB_NAME);
-    const collection = db.collection("quiz"); // Your collection name
+    // const db = client.db(DB_NAME);
+    // const collection = db.collection("quiz"); // Your collection name
 
-    const questions = await collection.find({}).toArray();
-    client.close();
+    // const questions = await collection.find({}).toArray();
+    // client.close();
+
+    await connectDB();
+    const questions = await Quiz.find({});
 
     if (!questions || questions.length === 0) {
       return NextResponse.json({ message: "No questions found" }, { status: 404 });

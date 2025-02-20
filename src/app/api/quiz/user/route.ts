@@ -37,22 +37,24 @@
 
 // app/api/quiz/user/route.ts
 import { NextResponse } from "next/server";
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 import User from "../../../../models/User"; // Correct path to the User model
 
-// MongoDB connection helper
-async function connectToDatabase() {
-  if (mongoose.connections[0].readyState) {
-    // If a connection is already established
-    return;
-  }
+import connectDB from "@/lib/mongodb";
 
-  await mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/mango");
-}
+// // MongoDB connection helper
+// async function connectToDatabase() {
+//   if (mongoose.connections[0].readyState) {
+//     // If a connection is already established
+//     return;
+//   }
+//   const test: string = "'define mongodb string properly'";
+//   await mongoose.connect(process.env.MONGO_URI || test);
+// }
 
 export async function POST(req: Request) {
   // Connect to the database
-  await connectToDatabase();
+  await connectDB();
 
   try {
     const { email, name, phone } = await req.json();

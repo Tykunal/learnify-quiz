@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { connectToDatabase } from '@/lib/mongodb'; // MongoDB connection helper
+import connectDB from '@/lib/mongodb';
 import User from '@/models/User'; // User model
 
 export async function POST(req: Request) {
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
       }
   
       // Connect to the database (using your connectToDatabase function)
-      await connectToDatabase();
+      await connectDB();
   
       let user = await User.findOne({ email });
   
